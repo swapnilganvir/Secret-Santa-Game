@@ -64,13 +64,22 @@ This project automates the **Secret Santa assignment** for employees by ensuring
     * `npm install express fs-extra csv-parser fast-csv`
 
 3. #### Add data
-    * Replace your CSV files in the data folder
-    * Update the filepath in the assignSecretSanta() function in the server.js file if required.
+    * Replace your CSV files in the data folder.
+    * Format for **employees.csv**:
+        * Columns - `Employee_Name,Employee_EmailID`
+        * Values - `Matthew King,matthew.king@acme.com`
+    * Format for **last_year.csv**:
+        *  Columns - `Employee_Name,Employee_EmailID,Secret_Child_Name,Secret_Child_EmailID`
+        * Values - `Matthew King,matthew.king@acme.com,Benjamin Collins,benjamin.collins@acme.com`
+    * Update the filepath/filename in the assignSecretSanta() function in the server.js file if required.
   
 3. #### Run project / Start server
-    * `npm run server` : works with nodemon
+    * If you have nodemon installed: `npm run server`
     * Goto `http://localhost:${PORT}`
-    * It will show the data in JSON format on the browser and create/update `output.csv` file on your local machine
+    * It will show the data in JSON format on the browser and create/update `output.csv` file on your local machine.
+    * Format for **output.csv**:
+        * Columns - `Employee_Name,Employee_EmailID,Secret_Child_Name,Secret_Child_EmailID`
+        * Values - `Matthew King,matthew.king@acme.com,Piper Stewart,piper.stewart@acme.com`
 
 
 <!-- CONTACT -->
